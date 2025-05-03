@@ -1,41 +1,101 @@
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
   font-weight: 400;
+  color: aliceblue;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --primary-color: #272757;
+  --secondary-color: #8686AC;
+  --tertiary-color: #505081;
+  --quarternary-color: #0f0e47;
 }
 
-body {
+body{
+  padding: 0;
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
+  width: 100vw;
   min-height: 100vh;
+  position: relative;
+
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+#root{
+  width: 100vw;
+  min-height: 100vh;
+  top: 0;
+  width: 100vw;
+  background-color: var(--tertiary-color);
 }
 
 
+header{
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1px 30px;
+}
+
+ul{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+}
+
+li{
+  list-style: none;
+}
+
+li > a{
+  padding: 5px 12px;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border-left: 1px solid var(--secondary-color);
+  transition: color 0.5s ease, font-size 0.5s ease-out;
+}
+
+a{
+  text-decoration: none;
+  color: aliceblue;
+}
+
+.active-link{
+  font-size: 1.5rem;
+  color: #b982e0;
+}
+
+footer{
+  background-color: var(--quarternary-color);
+  font-size: 11px;
+  padding: 1px;
+  text-align: center;
+}
+
+
+
+.loader {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top: 4px solid #803a9e;
+  width: 40px;
+  height: 40px;
+  animation: spin 2s linear infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto; /* Center the loader */
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.not-found{
+  height: 88vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

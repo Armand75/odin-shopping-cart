@@ -1,0 +1,41 @@
+.item-card{
+    width: 350px;
+    height: 530px;
+    background-color: var(--secondary-color);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2px auto;
+}
+
+.card-image{
+    width: 95%;
+    height: 350px;
+    border-radius: 10px;
+}
+
+.card-title{
+    font-size: 1.5rem;
+    margin-left: 15px;
+}
+
+.category-price{
+    display: flex;
+    gap: 50px
+}
+
+.category{
+    font-size: 1.5rem;
+    background-color: var(--primary-color);
+    padding: 5px 20px;
+    border-radius: 7px;
+    text-align: center;
+    width: 150px;
+}
+
+.card-price{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
